@@ -1,0 +1,43 @@
+﻿@model Proyect_web_def.Models.DetallePedido
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="background-color: #93B1A6;">
+<h1>Details</h1>
+
+<div>
+    <h4>DetallePedido</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecioUnitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrecioUnitario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.PedidoID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Producto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Producto.NombreProducto)
+        </dd>
+    </dl>
+</div>
+<div>
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.DetalleID">Editar</a> |
+        <a class="btn btn-primary" asp-action="Index">Volver a la lista</a>
+</div>

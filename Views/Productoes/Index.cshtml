@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Proyect_web_def.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="background-color: #93B1A6;">
+<h1>Index</h1>
+
+<p>
+        <a class="btn btn-primary" asp-action="Create">Crear nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ProductoID">Editar</a> |
+                        <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.ProductoID">Detalles</a> |
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ProductoID">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

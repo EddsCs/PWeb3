@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    
+}
+header {
+    background-color: #183D3D; /* Color de fondo deseado para el header */
+}
+
+
+
+
+
+/* Estilos para los enlaces del menú */
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s, background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+    /* Estilos al pasar el mouse por encima de los elementos del menú */
+    /* Estilos al pasar el mouse por encima de los elementos del menú */
+    .navbar-nav .nav-item .nav-link:hover {
+        color: white !important; /* Cambia el color del texto a blanco */
+        background-color: black !important; /* Cambia el color de fondo a negro */
+    }
+
+
+
+body {
+   
+    background-color: #5C8374;
+}

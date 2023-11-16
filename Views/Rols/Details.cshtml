@@ -1,0 +1,25 @@
+﻿@model Proyect_web_def.Models.Rol
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="background-color: #93B1A6;">
+<h1>Details</h1>
+
+<div>
+    <h4>Rol</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreRol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreRol)
+        </dd>
+    </dl>
+</div>
+<div>
+        <a class="btn btn-primary"  asp-action="Edit" asp-route-id="@Model?.RolID">Editar</a> |
+        <a class="btn btn-primary"  asp-action="Index">Volver a la lista</a>
+</div>
